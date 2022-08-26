@@ -1,0 +1,563 @@
+html{
+font-size: 62.5%;
+}
+* {
+margin: 0;
+padding: 0;
+}
+/* INICIO */
+.gridIndex{
+	display: grid;
+	grid-template-areas:
+	"logo navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+}
+header{
+	grid-area: logo;
+}
+.bgColorEncabezado, .navPages{
+	background-color: black;
+	height: 130px;
+}
+header img{
+	max-width: 90%;
+	max-height: 90%;
+	padding: 10px;
+}
+.navPages{
+	grid-area: navPages;
+}
+.navPages{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navPages ul{    
+	list-style-type: none;
+    margin: 0;
+   	padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.navPages li{
+	float: left
+}
+.navPages li a{
+    color: white;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;/*especifica el peso o grueso de la letra*/
+	font-size: 2rem;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navPages li a:hover{
+    background-color: gray;/*cambiar el color de fondo de los enlaces*/
+}
+main{
+	grid-area: main;
+	display: grid;
+	grid-template-areas:
+	"encabezado1 encabezado1 encabezado1  encabezado1"
+	"img img img img"
+	"encabezado2 encabezado2 encabezado2  encabezado2"
+	"img2 img2 img2 img2"
+	"promocionesBancarias promocionesBancarias promocionesBancarias promocionesBancarias";
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, auto);
+}
+.encabezado1{
+	grid-area: encabezado1;
+}
+.itemMasVendidos{
+	grid-area: img; 
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap; 
+	justify-content: space-evenly; 
+	text-align: center;
+}
+.itemMasVendidos img{
+	width: 200px; 
+	height: 180px; 
+	margin: 10px; 
+	padding: 10px;
+}
+.encabezado2{
+	grid-area: encabezado2;  
+	margin-top: 30px;
+}
+.itemLanzamientos{
+	grid-area: img2;
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap; 
+	justify-content: space-evenly; 
+	text-align: center;
+}
+.itemLanzamientos img{
+	width: 200px; 
+	height: 180px; 
+	margin: 10px; 
+	padding: 10px;
+}
+.promocionesBancarias{
+	grid-area: promocionesBancarias;
+}
+.promocionesBancarias img{
+	width: 100%; 
+	margin-top: 30px;
+}
+.encabezado1, .encabezado2{
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;/*especifica el peso o grueso de la letra*/
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;/*convierte letras en mayusculas*/
+	background-color: DimGray;
+	margin-bottom: 30px;
+	box-shadow: 0px 0px 10px 0px white inset;/*sombra interior a la caja utilizando la palabra clave inset*/
+}
+.cardProducto1,
+.cardProducto2,
+.cardProducto3,
+.cardProducto4,
+.cardProducto5,
+.cardProducto6,
+.cardProducto7,
+.cardProducto8{box-shadow: 0px 10px 10px black;}/*sombra externa a la caja*/
+.detalleProducto p{
+	margin: 5px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;/*especifica el peso o grueso de la letra*/
+	font-size: 1rem;
+	color: DimGray;
+	text-align: center;
+	text-transform: uppercase;/*convierte letras en mayusculas*/
+	background-color: white;
+}
+footer{
+	grid-area: footer;
+	display: grid;
+	grid-template-areas:
+	"lista lista lista rrss"
+	"texto texto texto texto"
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+}
+.bgColorPie{
+	background-color: black;
+	height: 180px;
+	color: white;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-size: 1rem;
+}
+.pieNosotros, .pieInformacion, .pieCentroDeAtencion{
+	list-style: none;
+	color: white;
+    text-decoration: none;
+}
+.pieInformacion a{
+	list-style: none;
+	color: white;
+    text-decoration: none;
+}
+.bgColorPie div img{
+	width: 50px;
+	height: 50px;
+	padding-left: 35px;
+}
+.derechosReservados{
+	color: white;
+	text-align: center;
+}
+.cajafooter{
+	grid-area: lista; 
+	grid-column: 1/-1; 
+	display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.rrss{
+	grid-area: rrss;
+}
+.derechosReservados{
+	grid-area: texto;
+}
+.derechosReservados{
+	width: 95%;
+	font-weight: bold;
+	padding-top: 20px;
+}
+/* TERMINA INICIO */
+/* INICIA VISTA MOBILE INICIO */
+@media only screen and (max-width: 768px){
+.gridIndex{
+	display: grid;
+	grid-template-areas:
+	"logo logo"
+	"navPages navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, auto);
+}
+header{
+	grid-area: logo; 
+	text-align: center;
+}
+.navPages{
+	grid-area: navPages;
+}
+main{
+	grid-area: main;
+}
+footer{
+	grid-area: footer;
+	display: grid;
+	grid-template-areas:
+	"lista lista lista rrss"
+	"texto texto texto texto";
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+}
+.cajafooter{
+	grid-area: lista; 
+	grid-column: 1/-1; 
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+  	flex-wrap: wrap;
+  	align-content: center;
+}
+ul{
+	padding-left: 35px;
+}
+.cardProducto3, .cardProducto4, .cardProducto7, .cardProducto8{display: none;}
+.lista li{
+	display: none;
+}
+.derechosReservados{
+	text-align: left; 
+	padding-left: 35px; 
+	font-weight: bold;}
+}
+/* TERMINA VISTA MOBILE INICIO */
+/* MAIN.NOSOTROS */
+.gridNosotros{
+	display: grid;
+	grid-template-areas:
+	"logo navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+/*Las css y areas asignadas de logo,navPages y footer son reutilizadas del gridIndex*/
+}
+main{
+	grid-area: main; 
+	display: flex; 
+	flex-direction: column;
+}
+.encabezadoNosotros{	
+	margin: 20px 30px 30px 30px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: DimGray;
+    text-transform: uppercase;/*convierte letras en mayusculas*/
+    padding-bottom: 10px;
+	border-bottom: solid 1px;
+}
+.historiaNosotros, .FinGracias{
+	margin: 20px 30px 30px 30px;	
+	width: 50%;
+	text-align: justify;	
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;
+	font-size: 1.4rem;
+	color: DimGray;
+}
+.valores{
+	margin: 20px 30px 30px 30px;
+	width: 50%;	
+	text-align: justify;	
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;
+	font-size: 1.4rem;
+	color: DimGray;
+}
+/* TERMINA MAIN.NOSOTROS */
+/* INICIA VISTA MOBILE NOSOTROS */
+@media only screen and (max-width: 768px){
+.gridNosotros{
+	display: grid;
+	grid-template-areas:
+	"logo logo"
+	"navPages navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, auto);
+/*Las css y  areas asignadas son reutilizadas de la media query gridIndex*/
+}
+}
+/* TERMINA VISTA MOBILE NOSOTROS */
+/* MAIN.CONTACTO */
+.gridContacto{
+	display: grid;
+	grid-template-areas:
+	"logo navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+/*Las css y areas asignadas de logo,navPages y footer son reutilizadas del gridIndex*/
+}
+main{
+	grid-area: main;
+}
+.dejeSuConsulta{	
+	margin: 20px 30px 30px 30px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;
+	font-size: 1.4rem;
+	color: DimGray;
+    padding-bottom: 10px;
+	border-bottom: solid 1px;
+    text-transform: uppercase;
+}
+.formaConsulta{	
+	margin-left: 30px;
+	margin-bottom: 20px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+    text-transform: uppercase;/*convierte letras en mayusculas*/
+	color: DimGray;
+}
+.datosContacto div{	
+	margin-left: 30px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;	
+	font-size: 1.2rem;
+	color: black;
+    padding-bottom: 10px;
+}
+.datosContacto input, select{	
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-size: 1rem;
+	color: DimGray;
+	border: 1px solid DimGray;
+    padding-bottom: 4px;
+   	padding-top: 4px;
+    border-radius: 3px;/*curva las esquina de la caja seleccion*/
+    width: 20%;
+}
+.datosContacto label{
+	margin-left: 30px;	
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-size: 1.2rem;
+	color: DimGray;
+}
+.datosContacto textarea, button{
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+/* TERMINA MAIN.CONTACTO */
+/* INICIA VISTA MOBILE CONTACTO */
+@media only screen and (max-width: 768px){
+.gridContacto{
+	display: grid;
+	grid-template-areas:
+	"logo logo"
+	"navPages navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, auto);
+/*Las css y  areas asignadas son reutilizadas de la media query gridIndex*/
+}
+}
+/* TERMINA VISTA MOBILE CONTACTO */
+/* MAIN.SUCURSALES */
+.gridSucursales{
+	display: grid;
+	grid-template-areas:
+	"logo navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+/*Las css y areas asignadas de logo,navPages y footer son reutilizadas del gridIndex*/
+}
+main{
+	grid-area: main;
+}
+.encabezadoSucursal{
+	margin: 20px 30px 30px 30px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: DimGray;
+    padding-bottom: 10px;
+	border-bottom: solid 1px;
+    text-transform: uppercase;
+}
+.ubicacionSucursal{
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap; 
+	justify-content: space-evenly; 
+	text-align: center; 
+	padding-bottom: 30px;
+}
+.zonaSucursal, .direcSucursal, .HorarioSucursal{
+	margin: 5px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-size: 1.2rem;
+	color: DimGray;
+	text-align: center
+}
+/* TERMINA MAIN.SUCURSALES */
+/* INICIA VISTA MOBILE SUCURSALES */
+@media only screen and (max-width: 768px){
+.gridSucursales{
+	display: grid;
+	grid-template-areas:
+	"logo logo"
+	"navPages navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, auto);
+/*Las css y  areas asignadas son reutilizadas de la media query gridIndex*/
+}
+.ubicacionSucursal{
+	display: flex; 
+	flex-direction: column; 
+	flex-wrap: wrap; 
+	justify-content: space-evenly; 
+	text-align: center; 
+	padding-bottom: 30px;
+}
+.abastoSucursal{
+	padding-bottom: 30px;
+}
+}
+/* TERMINA VISTA MOBILE SUCURSALES */
+/* MAIN.PRODUCTOS */
+.gridProductos{
+	display: grid;
+	grid-template-areas:
+	"logo navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, auto);
+/*Las css y areas asignadas de logo,navPages y footer son reutilizadas del gridIndex*/
+}
+main{
+	grid-area: main;
+}
+.productosDisponibles{
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: nowrap;
+}
+.cardsProductos{
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding-left: 50px;
+    padding-right: 50px;
+}
+.disponibleProducto1,
+.disponibleProducto2,
+.disponibleProducto3,
+.disponibleProducto4,
+.disponibleProducto5,
+.disponibleProducto6,
+.disponibleProducto7,
+.disponibleProducto8{margin-bottom: 30px;
+	box-shadow: 0px 10px 10px black;}/*sombra externa a la caja*/
+.tituloProductos{
+	margin: 20px 30px 30px 30px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;
+	font-size: 3rem;
+	color: DimGray;
+    padding-bottom: 10px;
+	border-bottom: solid 1px;
+    text-transform: uppercase;
+}
+.cajaseleccione{
+	margin: 0px 30px 0px 30px;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-size: 1rem;
+	color: DimGray;
+	border: 1px solid black;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-radius: 3px;/*curva las esquina de la caja seleccion*/
+    width: 10%;
+}
+.especificacionesProducto{
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: DimGray;
+	margin: 10px 40px 10px 30px;
+}
+.opcionlista li{
+	list-style-type: none;
+	font-style: Normal;
+	font-family: Arial, Times New Roman, sans-serif;
+	font-size: 1rem;
+	color: DimGray;
+	margin: 0px 10px 0px 30px;
+}
+/* TERMINA MAIN.PRODUCTOS */
+/* INICIA VISTA MOBILE PRODUCTOS */
+@media only screen and (max-width: 768px){
+.gridProductos{
+	display: grid;
+	grid-template-areas:
+	"logo logo"
+	"navPages navPages"
+	"main main"
+	"footer footer";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, auto);
+/*Las css y  areas asignadas son reutilizadas de la media query gridIndex*/
+}
+.disponibleProducto1, 
+.disponibleProducto2, 
+.disponibleProducto5, 
+.disponibleProducto6{display: none;}
+.opcionesProducto{display: none;}
+}
+/* TERMINA VISTA MOBILE PRODUCTOS */
