@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/estilo.css">
 	<title>Productos - En Sus Marcas 2022</title>
 </head>
@@ -69,7 +70,7 @@
 					<li><input type="checkbox" name="mayor a quince mil">$15000 o mas</li>
 				</ul>
 			</div>
-			<div class="cardsProductos">
+			<div class="cardsProductos"  data-aos="fade-up" data-aos-duration="3000">
 				<div class="disponibleProducto1">			
 					<img src="../assets/img/producto1.png" alt="Producto1">
 				<div class="detalleProducto">				
@@ -180,5 +181,10 @@
 		</div>
 	</footer>
 	<!-- CIERRE FOOTER -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
 </body>
 </html>

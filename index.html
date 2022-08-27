@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/estilo.css">
 	<title>En Sus Marcas 2022</title>
 </head>
@@ -28,7 +29,7 @@
 		<div class="encabezado1">
 			<h1>Lo mas vendido</h1>
 		</div>
-		<div class="itemMasVendidos">
+		<div class="itemMasVendidos" data-aos="fade-up" data-aos-duration="1500">
 			<div class="cardProducto1">			
 				<img src="assets/img/producto1.png" alt="Producto1">
 			<div class="detalleProducto">				
@@ -65,7 +66,7 @@
 		<div class="encabezado2">
 			<h1>Lanzamientos</h1>
 		</div>
-		<div class="itemLanzamientos">
+		<div class="itemLanzamientos"  data-aos="fade-up" data-aos-duration="3000">
 			<div class="cardProducto5">			
 				<img src="assets/img/producto5.png" alt="Producto5">
 			<div class="detalleProducto">
@@ -146,5 +147,9 @@
 		</div>
 	</footer>
 	<!-- CIERRE FOOTER -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

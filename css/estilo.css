@@ -70,6 +70,8 @@ main{
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, auto);
 }
+main{ 	height: 100vh; margin-bottom: 210px;
+}
 .encabezado1{
 	grid-area: encabezado1;
 }
@@ -154,7 +156,7 @@ footer{
 }
 .bgColorPie{
 	background-color: black;
-	height: 180px;
+	height: 200px;
 	color: white;
 	font-style: Normal;
 	font-family: Arial, Times New Roman, sans-serif;
@@ -221,6 +223,7 @@ header{
 }
 main{
 	grid-area: main;
+	margin-bottom: 241px;
 }
 footer{
 	grid-area: footer;
@@ -381,6 +384,9 @@ main{
 	margin-left: 30px;
 	margin-bottom: 30px;
 }
+input:focus{
+	font-size: 3rem;
+}
 /* TERMINA MAIN.CONTACTO */
 /* INICIA VISTA MOBILE CONTACTO */
 @media only screen and (max-width: 768px){
@@ -428,6 +434,7 @@ main{
 	flex-wrap: wrap; 
 	justify-content: space-evenly; 
 	text-align: center; 
+	padding-top: 100px;
 	padding-bottom: 30px;
 }
 .zonaSucursal, .direcSucursal, .HorarioSucursal{
@@ -483,6 +490,7 @@ main{
 	display: flex; 
 	flex-direction: row; 
 	flex-wrap: nowrap;
+	justify-content: space-around;
 }
 .cardsProductos{
 	display: flex; 
@@ -559,5 +567,8 @@ main{
 .disponibleProducto5, 
 .disponibleProducto6{display: none;}
 .opcionesProducto{display: none;}
+}
+.cardsProductos{
+	width: 100%;
 }
 /* TERMINA VISTA MOBILE PRODUCTOS */
